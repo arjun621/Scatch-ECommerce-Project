@@ -8,7 +8,6 @@ let userSchema = mongoose.Schema({
         type: Array,
         default: []
     },
-    isadmin: boolean,
     order: {
         type: Array,
         default: []

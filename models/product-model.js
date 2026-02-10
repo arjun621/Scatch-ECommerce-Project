@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { disconnect } = require("node:cluster");
 
 let productSchema = mongoose.Schema({
     image: String,

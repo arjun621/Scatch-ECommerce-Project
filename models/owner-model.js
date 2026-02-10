@@ -4,7 +4,10 @@ let ownerSchema = mongoose.Schema({
     fullname: String,
     email: String,
     password: String,
-    isadmin: boolean,
+    isadmin: {
+        type: Boolean,
+        default: false
+    },
     product: {
         type: Array,
         default: []

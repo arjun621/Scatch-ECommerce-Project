@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scatch - Login/Signup</title>
+    <title>Scatch - Authentication</title>
     <link rel="stylesheet" href="/stylesheets/index.css">
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <span class="logo">Scatch</span>
-    </nav>
+    <% if(error.length>0){ %>
+        <div class="error-box">
+            <span class="error-text">
+                <%= error %>
+            </span>
+        </div>
+        <% } %>
 
-    <main class="container">
-        <section class="auth-section">
-            <h1 class="heading">welcome to <span class="brand-blue">Scatch</span></h1>
-            <p class="sub-heading">create your account</p>
-            <form action="/register">
-                <input type="text" placeholder="Full Name" class="input-field">
-                <input type="email" placeholder="Email" class="input-field">
-                <input type="password" placeholder="Password" class="input-field">
-                <button type="submit" class="btn-primary">Create My Account</button>
-            </form>
-        </section>
 
-        <section class="auth-section">
-            <h2 class="form-title">Login Your Account</h2>
-            <form>
-                <input type="email" placeholder="Email" class="input-field">
-                <input type="password" placeholder="Password" class="input-field">
-                <button type="submit" class="btn-primary btn-short">Login</button>
-            </form>
-        </section>
-    </main>
+            <div class="container">
+                <div class="left-section">
+                    <div class="form-box">
+                        <h3>Welcome to <span class="brand">Scatch</span></h3>
+                        <h4>Create Your Account</h4>
+
+                        <form autocomplete="off" action="/users/register" method="post">
+                            <input type="text" placeholder="Full Name" name="fullname">
+                            <input type="email" placeholder="Email" name="email">
+                            <input type="password" placeholder="Password" name="password">
+                            <input type="submit" value="Create My Account" class="btn">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="right-section">
+                    <div class="form-box">
+                        <h4>Login Your Account</h4>
+
+                        <form autocomplete="off" action="/users/login" method="post">
+                            <input type="email" placeholder="Email" name="email">
+                            <input type="password" placeholder="Password" name="password">
+                            <input type="submit" value="Login" class="btn">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
 
 </body>
+
 </html>

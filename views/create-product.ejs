@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Product</title>
+    <link rel="stylesheet" href="/stylesheets/createproduct.css">
+</head>
+<body>
+
+    <% if(success.length>0){ %>
+        <div class="success-box">
+            <span class="success-text">
+                <%= success %>
+            </span>
+        </div>
+        <% } %>
+
+    <div class="page">
+
+        <div class="sidebar">
+            <a href="#">All Products</a>
+            <a href="#">Create New Product</a>
+        </div>
+
+        <main class="content">
+            <h2>Create New Product</h2>
+
+            <form autocomplete="off" action="/products/create" method="post" enctype="multipart/form-data">
+
+                <section class="section">
+                    <h3>Product Details</h3>
+
+                    <div class="form-group">
+                        <label>Product Image</label>
+                        <input type="file" name="image">
+                    </div>
+
+                    <div class="grid">
+                        <input type="text" placeholder="Product Name" name="name">
+                        <input type="text" placeholder="Product Price" name="price">
+                        <input type="text" placeholder="Discount Price" name="discount">
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h3>Panel Details</h3>
+
+                    <div class="grid">
+                        <input type="text" placeholder="Background Color" name="bgcolor">
+                        <input type="text" placeholder="Panel Color" name="panelcolor">
+                        <input type="text" placeholder="Text Color" name="textcolor">
+                    </div>
+                </section>
+
+                <input type="submit" value="Create New Product" class="submit-btn">
+
+            </form>
+        </main>
+
+    </div>
+
+</body>
+</html>

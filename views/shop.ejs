@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <link rel="stylesheet" href="/stylesheets/shop.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="sort-box">
+                <h3>Sort By</h3>
+                <select>
+                    <option>Popular</option>
+                    <option>Newest</option>
+                </select>
+            </div>
+
+            <div class="links-group">
+                <a href="#">New Collection</a>
+                <a href="#">All Products</a>
+                <a href="#">Discounted Products</a>
+            </div>
+
+            <div class="links-group">
+                <a href="#">Filter By :</a>
+                <a href="#">Availability</a>
+                <a href="#">Discount</a>
+            </div>
+
+        </aside>
+
+        <main class="products-section">
+
+            <div class="products-grid">
+
+                <% products.forEach(function(product) { %>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src= "data:image/jpeg;base64,<%= product.image.toString('base64') %>" alt="">
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <h3><%= product.name %></h3>
+                                <h4>₹ <%= product.price %></h4>
+                            </div>
+                            <div class="add-btn">+</div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

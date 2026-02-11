@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    padding: 40px;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+}
+
+.sidebar-links a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.sidebar-links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    width: 75%;
+    padding-left: 40px;
+}
+
+.delete-link {
+    color: red;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.delete-link:hover {
+    text-decoration: underline;
+}
+
+/* Product Grid */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    width: 220px;
+    background-color: #f87171;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    background-color: #facc15;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+}
+
+.product-info h4 {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Add Button */
+.add-btn {
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.add-btn:hover {
+    background-color: #e5e5e5;
+}

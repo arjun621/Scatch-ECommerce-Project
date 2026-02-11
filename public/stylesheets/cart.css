@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 40px;
+    padding: 60px;
+    height: 100vh;
+}
+
+.product-section {
+    width: 30%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 320px;
+    background-color: #facc15;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-header h3 {
+    font-size: 22px;
+}
+
+.quantity-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.qty-count {
+    padding: 5px 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+.net-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.net-total h4 {
+    font-size: 18px;
+}
+
+.net-total h2 {
+    font-size: 18px;
+}
+
+.price-section {
+    width: 70%;
+}
+
+.price-section h3 {
+    font-size: 20px;
+}
+
+.price-details {
+    margin-top: 20px;
+    padding-left: 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    max-width: 400px;
+}
+
+.divider {
+    height: 1px;
+    background: black;
+    margin: 40px 0;
+}
+
+.total-amount {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.total-amount h3 {
+    font-size: 20px;
+}
+
+.final-price {
+    color: green;
+    font-weight: bold;
+}

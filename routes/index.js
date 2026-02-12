@@ -18,9 +18,6 @@ router.get("/logout", isLoggedin, (req, res) => {
 })
 
 
-//1:05:50
-
-
 
 module.exports = router;
 

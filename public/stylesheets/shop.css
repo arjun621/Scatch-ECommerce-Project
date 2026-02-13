@@ -57,7 +57,7 @@ select {
 }
 
 .product-card {
-    width: 220px;
+    width: 195px;
 }
 
 .product-image {
@@ -123,4 +123,20 @@ select {
 
 .logout:hover {
     background-color: #c0392b;
+}
+
+.success-box {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 20px;
+    background-color: #2c58eb;
+    border-radius: 6px;
+}
+
+
+.success-text {
+    color: white;
+    display: inline-block;
 }

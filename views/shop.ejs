@@ -10,7 +10,16 @@
 
 <body>
 
+    <%- include('./partials/header') %>
 
+      <% if(success.length>0){ %>
+        <div class="success-box">
+            <span class="success-text">
+                <%= success %>
+            </span>
+        </div>
+        <% } %>
+        
     <div class="container"> 
 
         <aside class="sidebar">
@@ -51,7 +60,7 @@
                                 <h3><%= product.name %></h3>
                                 <h4>₹ <%= product.price %></h4>
                             </div>
-                            <div class="add-btn">+</div>
+                            <a href="/addtocart/<%= product._id %>" class="add-btn">+</a>
                         </div>
                     </div>
                 <% }) %>
